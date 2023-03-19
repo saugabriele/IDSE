@@ -12,4 +12,4 @@ x, y = load_mnist_data()
 xp = data_pert.perturb_dataset(x)
 
 plot_ten_digits(x, y)
-plot_ten_digits(xp, y)
+plot_ten_digits(xp)
