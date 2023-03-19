@@ -11,12 +11,5 @@ x, y = load_mnist_data()
 
 xp = data_pert.perturb_dataset(x)
 
-plt.imshow(xp[0, :].reshape(28,28))
-plt.show()
-plt.imshow(xp[1, :].reshape(28,28))
-plt.show()
-
-plt.imshow(x[0, :].reshape(28,28))
-plt.show()
-plt.imshow(x[1, :].reshape(28,28))
-plt.show()
+plot_ten_digits(x, y)
+plot_ten_digits(xp, y)
