@@ -9,6 +9,27 @@ from data_perturb import CDataPerturbRandom, CDataPerturbGaussian
 
 
 def robustness_test(clf, data_pert, param_name, param_values):
+    """
+    Running a robustness test on clf using the data_pert perturbation model.
+    The test is run by setting param_ame to different values (param_values).
+
+    Parameters
+    ----------
+    clf:
+        an object implementing fit and predict (scikit-learn interface).
+
+    data_pert: ...
+
+    param_name : ...
+
+    param_values: ...
+
+    Returns
+    -------
+    test_accuracies:
+                    Accuracy values...
+
+    """
     test_accuracies = np.zeros(shape=param_values.shape)
     for i, k in enumerate(param_values):
         # perturb test set
